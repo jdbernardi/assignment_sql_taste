@@ -293,12 +293,18 @@ A delicious appetizer of SQL-ey goodness
 
 	SELECT AVG( close ) AS "Avg Close",
        AVG( volume ) AS "Avg Vol"
-  	FROM tutorial.aapl_historical_stock_price 
+  	FROM tutorial.aapl_historical_stock_price
   	GROUP BY month
 
 8. The average price of days with a trading volume above 25,000,000 shares (just 1 row)
 
+	SELECT AVG( close ) AS "Avg Close"
+  	FROM tutorial.aapl_historical_stock_price
+  	WHERE volume > 25000000
+
 9. The average price on all months with an average daily trading volume above 10,000,000 shares.
+
+
 10. The lowest and highest prices that Apple stock achieved between 2005 and 2010 (inclusive).
 11. The average daily trading range in months where the stock moved more than $25 (open of month to close of month)
 12. All months in the second half of the year where average daily trading volume was below 10,000,000.
